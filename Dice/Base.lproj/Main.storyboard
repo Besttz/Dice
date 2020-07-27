@@ -16,16 +16,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du3-OP-w47">
-                                <rect key="frame" x="123.5" y="412" width="167" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="TAP ME"/>
+                                <rect key="frame" x="182.5" y="382" width="49" height="132"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <state key="normal" title="?"/>
                                 <connections>
                                     <action selector="cal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvW-29-7uQ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VFd-6i-1RX">
+                                <rect key="frame" x="107" y="349" width="200" height="197.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IRM-JN-WQ8"/>
+                                    <constraint firstAttribute="height" constant="200" id="ZGu-CA-FAH"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w33-yW-RPT">
+                                <rect key="frame" x="159.5" y="779" width="95" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-OW-F91">
+                                        <rect key="frame" x="0.0" y="6.5" width="95" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="QBI-Wi-OEM"/>
+                                            <constraint firstAttribute="width" constant="95" id="jgE-MR-u9r"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="chevron.compact.up" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nuz-OW-F91" firstAttribute="centerX" secondItem="w33-yW-RPT" secondAttribute="centerX" id="0lj-Q6-wwx"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w33-yW-RPT" secondAttribute="bottom" constant="50" id="9Ls-5F-3BR"/>
+                            <constraint firstItem="VFd-6i-1RX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Aa2-XH-x8a"/>
+                            <constraint firstItem="w33-yW-RPT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QKT-xW-CHb"/>
+                            <constraint firstItem="VFd-6i-1RX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bra-Sy-jO3"/>
                             <constraint firstItem="du3-OP-w47" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c9F-Xn-eLG"/>
                             <constraint firstItem="du3-OP-w47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDE-30-6jH"/>
                         </constraints>
@@ -40,4 +67,8 @@
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.compact.up" catalog="system" width="128" height="43"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
