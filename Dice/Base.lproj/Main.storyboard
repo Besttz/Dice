@@ -16,7 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du3-OP-w47">
-                                <rect key="frame" x="182.5" y="382" width="49" height="132"/>
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0oj-ND-P2V"/>
+                                    <constraint firstAttribute="height" constant="200" id="F1e-vz-zOa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="?"/>
                                 <connections>
@@ -30,36 +34,32 @@
                                     <constraint firstAttribute="height" constant="200" id="ZGu-CA-FAH"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w33-yW-RPT">
-                                <rect key="frame" x="159.5" y="779" width="95" height="33"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-OW-F91">
-                                        <rect key="frame" x="0.0" y="6.5" width="95" height="19.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="QBI-Wi-OEM"/>
-                                            <constraint firstAttribute="width" constant="95" id="jgE-MR-u9r"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="chevron.compact.up" catalog="system"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Nuz-OW-F91" firstAttribute="centerX" secondItem="w33-yW-RPT" secondAttribute="centerX" id="0lj-Q6-wwx"/>
-                                </constraints>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPz-5r-LKV">
+                                <rect key="frame" x="359" y="828" width="25" height="24"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-Qt-cyF">
+                                <rect key="frame" x="162" y="831" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w33-yW-RPT" secondAttribute="bottom" constant="50" id="9Ls-5F-3BR"/>
                             <constraint firstItem="VFd-6i-1RX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Aa2-XH-x8a"/>
-                            <constraint firstItem="w33-yW-RPT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QKT-xW-CHb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zPz-5r-LKV" secondAttribute="trailing" constant="10" id="Qyg-KJ-Jmd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zPz-5r-LKV" secondAttribute="bottom" constant="10" id="V56-rZ-FU9"/>
                             <constraint firstItem="VFd-6i-1RX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bra-Sy-jO3"/>
                             <constraint firstItem="du3-OP-w47" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c9F-Xn-eLG"/>
                             <constraint firstItem="du3-OP-w47" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDE-30-6jH"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cIX-Qt-cyF" secondAttribute="bottom" constant="10" id="ePq-fa-kbx"/>
+                            <constraint firstItem="cIX-Qt-cyF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hax-yl-49G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="dice" destination="du3-OP-w47" id="ZYP-Gz-ivf"/>
+                        <outlet property="textLabel" destination="cIX-Qt-cyF" id="jSO-qO-0Ti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,7 +68,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.compact.up" catalog="system" width="128" height="43"/>
         <image name="square" catalog="system" width="128" height="114"/>
     </resources>
 </document>

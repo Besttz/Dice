@@ -11,13 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var dice: UIButton!
+    @IBOutlet weak var textLabel: UILabel!
     
     @IBAction func cal(_ sender: Any) {
         let d1 = Int.random(in: 1..<6)
         let d2 = Int.random(in: 1..<6)
         let total = d1+d2
         dice.setTitle(String(total), for: .normal)
-        
+        textLabel.text = " \(String(d1)) + \(String(d2))"
     }
     
     override func viewDidLoad() {
