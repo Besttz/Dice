@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     @IBAction func cal(_ sender: Any) {
         let d1 = Int.random(in: 1..<6)
-        let d2 = Int.random(in: 0..<6)
+        let d2 = Int.random(in: 1..<6)
         let total = d1+d2
         dice.setTitle(String(total), for: .normal)
         
