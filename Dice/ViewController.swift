@@ -13,13 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var dice: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     
-    @IBAction func cal(_ sender: Any) {
-        let d1 = Int.random(in: 1..<6)
-        let d2 = Int.random(in: 1..<6)
-        let total = d1+d2
-        dice.setTitle(String(total), for: .normal)
-        textLabel.text = " \(String(d1)) + \(String(d2))"
-    }
+    var diceNum = 1
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +26,23 @@ class ViewController: UIViewController {
         
     }
 
-
+    @IBAction func changeNumDice(_ sender: UISegmentedControl) {
+        diceNum = sender.selectedSegmentIndex + 1
+        if diceNum > 2 {
+            textLabel.text = "\(diceNum) Dices"
+        } else {
+            textLabel.text = "\(diceNum) Dice"
+        }
+        
+    }
+    
+    
+    @IBAction func cal(_ sender: Any) {
+        let d1 = Int.random(in: 1..<6)
+        let d2 = Int.random(in: 1..<6)
+        let total = d1+d2
+        dice.setTitle(String(total), for: .normal)
+        textLabel.text = " \(String(d1)) + \(String(d2))"
+    }
 }
 
