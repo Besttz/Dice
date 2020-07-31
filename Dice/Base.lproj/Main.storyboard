@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -37,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPz-5r-LKV">
                                 <rect key="frame" x="359" y="828" width="25" height="24"/>
                                 <connections>
-                                    <segue destination="AHD-UQ-Eib" kind="show" id="Bq7-Fm-X7D"/>
+                                    <segue destination="AHD-UQ-Eib" kind="show" id="DS8-LW-Xux"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-Qt-cyF">
@@ -60,6 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kLd-v5-0E3"/>
                     <connections>
                         <outlet property="dice" destination="du3-OP-w47" id="ZYP-Gz-ivf"/>
                         <outlet property="textLabel" destination="cIX-Qt-cyF" id="jSO-qO-0Ti"/>
@@ -69,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="0qW-Yr-rSF">
             <objects>
-                <viewController id="AHD-UQ-Eib" sceneMemberID="viewController">
+                <viewController id="AHD-UQ-Eib" customClass="ViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eFe-Gr-pUn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,21 +82,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Settings" id="Wqn-EC-8eA">
-                                        <barButtonItem key="backBarButtonItem" title="Done" id="e6m-EF-juJ"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="tjf-Ko-ITV" userLabel="Done">
+                                            <connections>
+                                                <segue destination="0vb-RA-ZAr" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="7kJ-cZ-GeO"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-OZ-6Bo">
-                                <rect key="frame" x="140.33333333333331" y="76" width="133.33333333333331" height="49"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-OZ-6Bo">
+                                <rect key="frame" x="20" y="76" width="374" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUMBER OF DICES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyQ-Kj-AIe">
-                                        <rect key="frame" x="0.0" y="0.0" width="133.33333333333334" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="rnc-5b-KiG">
-                                        <rect key="frame" x="0.0" y="18" width="133.33333333333334" height="32"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="32"/>
                                         <segments>
                                             <segment title="1"/>
                                             <segment title="2"/>
@@ -109,14 +114,18 @@
                         <constraints>
                             <constraint firstItem="1Kg-6T-Ye1" firstAttribute="top" secondItem="eFe-Gr-pUn" secondAttribute="top" id="HW2-iF-55d"/>
                             <constraint firstItem="IkU-OZ-6Bo" firstAttribute="top" secondItem="1Kg-6T-Ye1" secondAttribute="bottom" constant="20" id="LRM-d2-K5Q"/>
+                            <constraint firstItem="vqk-Z4-qLE" firstAttribute="trailing" secondItem="IkU-OZ-6Bo" secondAttribute="trailing" constant="20" id="RSz-qh-K2P"/>
                             <constraint firstItem="IkU-OZ-6Bo" firstAttribute="centerX" secondItem="eFe-Gr-pUn" secondAttribute="centerX" id="rhd-to-v66"/>
                             <constraint firstAttribute="trailing" secondItem="1Kg-6T-Ye1" secondAttribute="trailing" id="sAX-8V-3qF"/>
                             <constraint firstItem="1Kg-6T-Ye1" firstAttribute="leading" secondItem="eFe-Gr-pUn" secondAttribute="leading" id="ubo-mk-0fU"/>
+                            <constraint firstItem="IkU-OZ-6Bo" firstAttribute="leading" secondItem="vqk-Z4-qLE" secondAttribute="leading" constant="20" id="zKg-pM-v8R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vqk-Z4-qLE"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="d1S-OO-DJB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EB-7l-t15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0vb-RA-ZAr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="871" y="138"/>
         </scene>
