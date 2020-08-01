@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var dice: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     
-    var diceNum = 1
     
     
     
@@ -22,19 +21,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-        
-    }
-
-    @IBAction func changeNumDice(_ sender: UISegmentedControl) {
-        diceNum = sender.selectedSegmentIndex + 1
-        if diceNum > 2 {
-            textLabel.text = "\(diceNum) Dices"
-        } else {
-            textLabel.text = "\(diceNum) Dice"
-        }
-        
-    }
+    
     
     
     @IBAction func cal(_ sender: Any) {

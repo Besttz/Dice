@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		656C04BF24D5728B008736D7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C04BE24D5728B008736D7 /* SettingViewController.swift */; };
 		65A77C1724CF15DF007412D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A77C1624CF15DF007412D1 /* AppDelegate.swift */; };
 		65A77C1924CF15DF007412D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A77C1824CF15DF007412D1 /* SceneDelegate.swift */; };
 		65A77C1B24CF15DF007412D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A77C1A24CF15DF007412D1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		656C04BE24D5728B008736D7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		65A77C1324CF15DF007412D1 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A77C1624CF15DF007412D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A77C1824CF15DF007412D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				65A77C1624CF15DF007412D1 /* AppDelegate.swift */,
 				65A77C1824CF15DF007412D1 /* SceneDelegate.swift */,
 				65A77C1A24CF15DF007412D1 /* ViewController.swift */,
+				656C04BE24D5728B008736D7 /* SettingViewController.swift */,
 				65A77C1C24CF15DF007412D1 /* Main.storyboard */,
 				65A77C1F24CF15E1007412D1 /* Assets.xcassets */,
 				65A77C2124CF15E1007412D1 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				65A77C1B24CF15DF007412D1 /* ViewController.swift in Sources */,
 				65A77C1724CF15DF007412D1 /* AppDelegate.swift in Sources */,
 				65A77C1924CF15DF007412D1 /* SceneDelegate.swift in Sources */,
+				656C04BF24D5728B008736D7 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

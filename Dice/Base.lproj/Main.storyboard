@@ -73,7 +73,7 @@
         <!--Settings-->
         <scene sceneID="0qW-Yr-rSF">
             <objects>
-                <viewController id="AHD-UQ-Eib" customClass="ViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AHD-UQ-Eib" customClass="SettingViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eFe-Gr-pUn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                                     <navigationItem title="Settings" id="Wqn-EC-8eA">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="tjf-Ko-ITV" userLabel="Done">
                                             <connections>
-                                                <segue destination="0vb-RA-ZAr" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="7kJ-cZ-GeO"/>
+                                                <segue destination="0vb-RA-ZAr" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="EcB-7n-jBu"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
