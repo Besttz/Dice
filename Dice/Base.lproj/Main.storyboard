@@ -105,6 +105,7 @@
                                             <segment title="1"/>
                                             <segment title="2"/>
                                             <segment title="3"/>
+                                            <segment title="🐔"/>
                                         </segments>
                                         <connections>
                                             <action selector="changeNumDice:" destination="AHD-UQ-Eib" eventType="valueChanged" id="rLU-cK-nkZ"/>
@@ -126,6 +127,9 @@
                         <viewLayoutGuide key="safeArea" id="vqk-Z4-qLE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="d1S-OO-DJB"/>
+                    <connections>
+                        <outlet property="diceNumSeg" destination="rnc-5b-KiG" id="lEu-rb-f2i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EB-7l-t15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0vb-RA-ZAr" userLabel="Exit" sceneMemberID="exit"/>

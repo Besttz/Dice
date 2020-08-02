@@ -9,29 +9,43 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var dice: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     
-    
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-    //        performSegue(withIdentifier: "done", sender: nil)
-        }
+    var diceNum = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
     }
     
     
-    
-    
     @IBAction func cal(_ sender: Any) {
-        let d1 = Int.random(in: 1..<6)
-        let d2 = Int.random(in: 1..<6)
-        let total = d1+d2
+        var diceResults = [Int]()
+        //        diceResults[1] = Int.random(in: 1..<6)
+        var total = 0
+        var text = ""
+        for i in 0...diceNum-1 {
+            diceResults.append(Int.random(in: 1..<6))
+            total += diceResults[i]
+            text += " \(diceResults[i])"
+        }
         dice.setTitle(String(total), for: .normal)
-        textLabel.text = " \(String(d1)) + \(String(d2))"
+        textLabel.text = text
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        let homeView = segue.destination as! SettingViewController
+        homeView.diceNum = diceNum
     }
 }
 
