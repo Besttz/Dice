@@ -17,9 +17,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
@@ -28,7 +25,6 @@ class ViewController: UIViewController {
     
     @IBAction func cal(_ sender: Any) {
         var diceResults = [Int]()
-        //        diceResults[1] = Int.random(in: 1..<6)
         var total = 0
         var text = ""
         for i in 0...diceNum-1 {
@@ -42,8 +38,6 @@ class ViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         let homeView = segue.destination as! SettingViewController
         homeView.diceNum = diceNum
     }
