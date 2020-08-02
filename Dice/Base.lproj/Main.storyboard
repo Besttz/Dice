@@ -37,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPz-5r-LKV">
                                 <rect key="frame" x="359" y="828" width="25" height="24"/>
                                 <connections>
-                                    <segue destination="AHD-UQ-Eib" kind="show" id="DS8-LW-Xux"/>
+                                    <segue destination="AHD-UQ-Eib" kind="presentation" id="DS8-LW-Xux"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-Qt-cyF">
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="961" y="138"/>
         </scene>
         <!--Settings-->
         <scene sceneID="0qW-Yr-rSF">
@@ -84,7 +84,7 @@
                                     <navigationItem title="Settings" id="Wqn-EC-8eA">
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="tjf-Ko-ITV" userLabel="Done">
                                             <connections>
-                                                <segue destination="0vb-RA-ZAr" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="EcB-7n-jBu"/>
+                                                <segue destination="0vb-RA-ZAr" kind="unwind" identifier="done" unwindAction="myUnwindActionWithUnwindSegue:" id="ujE-X5-Utl"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -130,7 +130,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EB-7l-t15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0vb-RA-ZAr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="871" y="138"/>
+            <point key="canvasLocation" x="1779.7101449275365" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>

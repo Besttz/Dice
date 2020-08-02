@@ -18,17 +18,15 @@ class SettingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
-        
-    }
+    
 
     @IBAction func changeNumDice(_ sender: UISegmentedControl) {
         diceNum = sender.selectedSegmentIndex + 1
-        if diceNum > 2 {
-            textLabel.text = "\(diceNum) Dices"
-        } else {
-            textLabel.text = "\(diceNum) Dice"
-        }
+//        if diceNum > 2 {
+//            textLabel.text = "\(diceNum) Dices"
+//        } else {
+//            textLabel.text = "\(diceNum) Dice"
+//        }
         
     }
 
