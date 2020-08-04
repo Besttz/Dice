@@ -35,6 +35,16 @@ class SettingViewController: UIViewController {
         }
     }
     
+    @IBAction func supportTapped(_ sender: Any) {
+        if let url = URL(string: "mailto:app@tommy.nz") {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
