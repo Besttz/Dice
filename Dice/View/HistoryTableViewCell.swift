@@ -9,10 +9,8 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var textL: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    
-
 }

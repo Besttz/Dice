@@ -21,11 +21,10 @@ class ViewController: UIViewController {
     var dices = [Dice]()
     
     let formatter = DateFormatter()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){

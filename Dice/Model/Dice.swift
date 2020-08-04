@@ -12,16 +12,14 @@ class Dice {
     var time:String
     var index:Int
     var dices:Int
-    var value:[Int]
-    var total:Int
+    var value = [Int]()
+    var total = 0
     var text:String
     
     init(index:Int, dices:Int, time:String) {
         self.index = index
         self.dices = dices
         self.time = time
-        total = 0
-        value = [Int]()
         text = "\(index):"
         
         for i in 0...dices-1 {
@@ -29,7 +27,7 @@ class Dice {
             total += value[i]
             text += " \(value[i])"
         }
-
+        
     }
     
 }

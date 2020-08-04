@@ -10,9 +10,8 @@ import UIKit
 
 class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    
-
     var dices = [Dice]()
+    var clear = false
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,8 +21,12 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
-//        tableView.reloadData()
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func clearTapped(_ sender: Any) {
+        clear = true
+        dices = [Dice]()
+        tableView.reloadData()
     }
     
     // MARK: - TableView Methods
@@ -43,15 +46,17 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // Return the Cell
         return cell
     }
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "done" && clear {
+            let homeView = segue.destination as! ViewController
+            homeView.dices = dices
+            homeView.index = 1
+            
+        }
     }
-    */
-
+    
 }

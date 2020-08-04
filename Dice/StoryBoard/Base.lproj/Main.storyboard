@@ -184,10 +184,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="History" id="VSC-E3-ox4">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="1kj-aJ-3VJ"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="1kj-aJ-3VJ">
+                                            <connections>
+                                                <action selector="clearTapped:" destination="C8Q-79-Wg6" id="go8-aM-ahY"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="XXn-Rw-o4A" userLabel="Done">
                                             <connections>
-                                                <segue destination="Cy3-aL-jis" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="NJP-EZ-Rss"/>
+                                                <segue destination="Cy3-aL-jis" kind="unwind" identifier="done" unwindAction="myUnwindActionWithUnwindSegue:" id="NJP-EZ-Rss"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -210,13 +214,13 @@
                                                         <stackView opaque="NO" tag="1" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qhw-IW-tLe">
                                                             <rect key="frame" x="0.0" y="0.0" width="304.5" height="40"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Index: X X " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIN-3z-kP9">
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Index: X X " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIN-3z-kP9">
                                                                     <rect key="frame" x="0.0" y="0.0" width="304.5" height="19.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2020/08/04 6:56:13 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6h-B4-gCU">
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020/08/04 6:56:13 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6h-B4-gCU">
                                                                     <rect key="frame" x="0.0" y="19.5" width="304.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
