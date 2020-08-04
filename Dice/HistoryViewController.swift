@@ -8,16 +8,43 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
 
     var dices = [Dice]()
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Set self as the delegate and datasource
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+//        tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - TableView Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Returm the number of dices
+        return dices.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Get a Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath)
+        
+        // Customize
+        let label = cell.viewWithTag(1) as? UILabel
+        if label != nil {
+            label?.text = "Hi"
+        }
+        
+        // Return the Cell
+        return cell
+    }
 
     /*
     // MARK: - Navigation
