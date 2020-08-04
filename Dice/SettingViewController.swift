@@ -13,6 +13,7 @@ class SettingViewController: UIViewController {
     var diceNum = 2
     var sound = true
     var soundManager = SoundManager()
+    var dices = [Dice]()
     
     @IBOutlet weak var diceNumSeg: UISegmentedControl!
     @IBOutlet weak var soundSwitch: UISwitch!
@@ -39,17 +40,23 @@ class SettingViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let homeView = segue.destination as! ViewController
-        homeView.diceNum = diceNum
-        homeView.sound = sound
-        
-        if diceNum == 4 {
-            homeView.dice.setTitle("🐔", for: .normal)
-            homeView.textLabel.text = "Zhenyu"
-        } else if diceNum > 2 {
-            homeView.textLabel.text = "\(diceNum) Dices"
-        } else if diceNum != 2 {
-            homeView.textLabel.text = "\(diceNum) Dice"
+        if segue.identifier == "done" {
+            let homeView = segue.destination as! ViewController
+            homeView.diceNum = diceNum
+            homeView.sound = sound
+            
+            if diceNum == 4 {
+                homeView.dice.setTitle("🐔", for: .normal)
+                homeView.textLabel.text = "Zhenyu"
+            } else if diceNum > 2 {
+                homeView.textLabel.text = "\(diceNum) Dices"
+            } else if diceNum != 2 {
+                homeView.textLabel.text = "\(diceNum) Dice"
+            }
+        } else if segue.identifier == "history" {
+            let homeView = segue.destination as! HistoryViewController
+            // Deliery parameters
+            homeView.dices = dices
         }
     }
     

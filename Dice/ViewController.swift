@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var diceNum = 2
     var sound = true
     var soundManager = SoundManager()
+    var index = 1
+    var dices = [Dice]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +28,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func cal(_ sender: Any) {
-        var diceResults = [Int]()
-        var total = 0
-        var text = ""
-        for i in 0...diceNum-1 {
-            diceResults.append(Int.random(in: 1..<6))
-            total += diceResults[i]
-            text += " \(diceResults[i])"
-        }
-        dice.setTitle(String(total), for: .normal)
-        textLabel.text = text
+        // Create a new dice and calculate
+        dices.append(Dice(index: index, dices: diceNum))
+        
+        // Change the UI element
+        dice.setTitle("\(dices[index-1].total)", for: .normal)
+        textLabel.text = dices[index-1].text
+        
+        // Update the number of dices
+        index += 1
         
         // Play Sound
         if sound {
@@ -46,8 +47,10 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let homeView = segue.destination as! SettingViewController
+        // Deliery parameters
         homeView.diceNum = diceNum
         homeView.sound = sound
+        homeView.dices = dices
     }
 }
 
