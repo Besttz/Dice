@@ -9,17 +9,17 @@
 import Foundation
 
 class Dice {
-    var time:time_t
+    var time:String
     var index:Int
     var dices:Int
     var value:[Int]
     var total:Int
     var text:String
     
-    init(index:Int, dices:Int) {
+    init(index:Int, dices:Int, time:String) {
         self.index = index
         self.dices = dices
-        time = 0
+        self.time = time
         total = 0
         value = [Int]()
         text = "\(index):"

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -19,8 +20,12 @@ class ViewController: UIViewController {
     var index = 1
     var dices = [Dice]()
     
+    let formatter = DateFormatter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
     }
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
@@ -29,7 +34,7 @@ class ViewController: UIViewController {
     
     @IBAction func cal(_ sender: Any) {
         // Create a new dice and calculate
-        dices.append(Dice(index: index, dices: diceNum))
+        dices.append(Dice(index: index, dices: diceNum, time: formatter.string(from: Date())))
         
         // Change the UI element
         dice.setTitle("\(dices[index-1].total)", for: .normal)

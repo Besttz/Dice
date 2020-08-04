@@ -39,7 +39,7 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         // Customize
         cell.totalLabel.text = String(dices[indexPath.row].total)
         cell.textL.text = dices[indexPath.row].text
-        
+        cell.timeLabel.text = dices[indexPath.row].time
         // Return the Cell
         return cell
     }

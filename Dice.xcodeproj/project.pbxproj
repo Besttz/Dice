@@ -52,9 +52,38 @@
 		6576BF1B24D9286B00DBD747 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				6576BF1E24D928BC00DBD747 /* SoundManager.swift */,
 				6576BF1C24D9287E00DBD747 /* ding.wav */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		6576BF2624D97EAD00DBD747 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65A77C1A24CF15DF007412D1 /* ViewController.swift */,
+				656C04BE24D5728B008736D7 /* SettingViewController.swift */,
+				6576BF2424D97AEF00DBD747 /* HistoryTableViewCell.swift */,
+				6576BF2024D9445300DBD747 /* HistoryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6576BF2724D97EBC00DBD747 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				65A77C1C24CF15DF007412D1 /* Main.storyboard */,
+				65A77C2124CF15E1007412D1 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		6576BF2824D97EE100DBD747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6576BF2224D944AA00DBD747 /* Dice.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		65A77C0A24CF15DF007412D1 = {
@@ -79,15 +108,10 @@
 				6576BF1B24D9286B00DBD747 /* Sound */,
 				65A77C1624CF15DF007412D1 /* AppDelegate.swift */,
 				65A77C1824CF15DF007412D1 /* SceneDelegate.swift */,
-				65A77C1A24CF15DF007412D1 /* ViewController.swift */,
-				656C04BE24D5728B008736D7 /* SettingViewController.swift */,
-				6576BF1E24D928BC00DBD747 /* SoundManager.swift */,
-				65A77C1C24CF15DF007412D1 /* Main.storyboard */,
-				6576BF2424D97AEF00DBD747 /* HistoryTableViewCell.swift */,
-				6576BF2224D944AA00DBD747 /* Dice.swift */,
-				6576BF2024D9445300DBD747 /* HistoryViewController.swift */,
+				6576BF2624D97EAD00DBD747 /* View */,
+				6576BF2724D97EBC00DBD747 /* StoryBoard */,
+				6576BF2824D97EE100DBD747 /* Model */,
 				65A77C1F24CF15E1007412D1 /* Assets.xcassets */,
-				65A77C2124CF15E1007412D1 /* LaunchScreen.storyboard */,
 				65A77C2424CF15E1007412D1 /* Info.plist */,
 			);
 			path = Dice;
