@@ -9,9 +9,10 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-
+    
     var diceNum = 2
     var sound = true
+    var soundManager = SoundManager()
     
     @IBOutlet weak var diceNumSeg: UISegmentedControl!
     @IBOutlet weak var soundSwitch: UISwitch!
@@ -21,20 +22,23 @@ class SettingViewController: UIViewController {
         diceNumSeg.selectedSegmentIndex = diceNum - 1
         soundSwitch.isOn = sound
     }
-
+    
     @IBAction func changeNumDice(_ sender: UISegmentedControl) {
         diceNum = sender.selectedSegmentIndex + 1
     }
-
+    
     @IBAction func soundSwitchTapped(_ sender: UISwitch) {
         sound = sender.isOn
+        if sound {
+            soundManager.playSound()
+        }
     }
     
     // MARK: - Navigation
-
-
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         let homeView = segue.destination as! ViewController
         homeView.diceNum = diceNum
         homeView.sound = sound
@@ -48,6 +52,6 @@ class SettingViewController: UIViewController {
             homeView.textLabel.text = "\(diceNum) Dice"
         }
     }
-
-
+    
+    
 }

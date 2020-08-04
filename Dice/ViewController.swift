@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var diceNum = 2
     var sound = true
+    var soundManager = SoundManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,11 @@ class ViewController: UIViewController {
         }
         dice.setTitle(String(total), for: .normal)
         textLabel.text = text
+        
+        // Play Sound
+        if sound {
+            soundManager.playSound()
+        }
     }
     
     
