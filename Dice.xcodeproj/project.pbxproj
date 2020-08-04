@@ -12,6 +12,7 @@
 		6576BF1F24D928BC00DBD747 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576BF1E24D928BC00DBD747 /* SoundManager.swift */; };
 		6576BF2124D9445300DBD747 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576BF2024D9445300DBD747 /* HistoryViewController.swift */; };
 		6576BF2324D944AA00DBD747 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576BF2224D944AA00DBD747 /* Dice.swift */; };
+		6576BF2524D97AEF00DBD747 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6576BF2424D97AEF00DBD747 /* HistoryTableViewCell.swift */; };
 		65A77C1724CF15DF007412D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A77C1624CF15DF007412D1 /* AppDelegate.swift */; };
 		65A77C1924CF15DF007412D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A77C1824CF15DF007412D1 /* SceneDelegate.swift */; };
 		65A77C1B24CF15DF007412D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A77C1A24CF15DF007412D1 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		6576BF1E24D928BC00DBD747 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		6576BF2024D9445300DBD747 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		6576BF2224D944AA00DBD747 /* Dice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		6576BF2424D97AEF00DBD747 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		65A77C1324CF15DF007412D1 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A77C1624CF15DF007412D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65A77C1824CF15DF007412D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				656C04BE24D5728B008736D7 /* SettingViewController.swift */,
 				6576BF1E24D928BC00DBD747 /* SoundManager.swift */,
 				65A77C1C24CF15DF007412D1 /* Main.storyboard */,
+				6576BF2424D97AEF00DBD747 /* HistoryTableViewCell.swift */,
 				6576BF2224D944AA00DBD747 /* Dice.swift */,
 				6576BF2024D9445300DBD747 /* HistoryViewController.swift */,
 				65A77C1F24CF15E1007412D1 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 			files = (
 				65A77C1B24CF15DF007412D1 /* ViewController.swift in Sources */,
 				65A77C1724CF15DF007412D1 /* AppDelegate.swift in Sources */,
+				6576BF2524D97AEF00DBD747 /* HistoryTableViewCell.swift in Sources */,
 				6576BF2324D944AA00DBD747 /* Dice.swift in Sources */,
 				65A77C1924CF15DF007412D1 /* SceneDelegate.swift in Sources */,
 				6576BF2124D9445300DBD747 /* HistoryViewController.swift in Sources */,

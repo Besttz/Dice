@@ -197,7 +197,7 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="591"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="60" id="LWH-H0-kin">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCell" rowHeight="60" id="LWH-H0-kin" customClass="HistoryTableViewCell" customModule="Dice" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LWH-H0-kin" id="uAe-cN-s5o">
@@ -240,6 +240,11 @@
                                                 <constraint firstItem="GQv-dA-hFK" firstAttribute="leading" secondItem="uAe-cN-s5o" secondAttribute="leading" constant="20" id="YdW-hZ-3Vv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textL" destination="HIN-3z-kP9" id="ytS-84-m9j"/>
+                                            <outlet property="timeLabel" destination="g6h-B4-gCU" id="uUg-5P-1iU"/>
+                                            <outlet property="totalLabel" destination="QLa-zp-7NM" id="Uzq-iz-Y22"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

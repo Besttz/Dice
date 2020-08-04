@@ -34,13 +34,11 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get a Cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath) as! HistoryTableViewCell
         
         // Customize
-        let label = cell.viewWithTag(1) as? UILabel
-        if label != nil {
-            label?.text = "Hi"
-        }
+        cell.totalLabel.text = String(dices[indexPath.row].total)
+        cell.textL.text = dices[indexPath.row].text
         
         // Return the Cell
         return cell
