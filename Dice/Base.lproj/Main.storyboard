@@ -90,8 +90,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-OZ-6Bo">
-                                <rect key="frame" x="20" y="76" width="374" height="59"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IkU-OZ-6Bo">
+                                <rect key="frame" x="20" y="76" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NUMBER OF DICES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyQ-Kj-AIe">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
@@ -100,7 +100,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="rnc-5b-KiG">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="32"/>
+                                        <rect key="frame" x="0.0" y="38" width="374" height="32"/>
                                         <segments>
                                             <segment title="1"/>
                                             <segment title="2"/>
@@ -111,6 +111,23 @@
                                             <action selector="changeNumDice:" destination="AHD-UQ-Eib" eventType="valueChanged" id="rLU-cK-nkZ"/>
                                         </connections>
                                     </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-dE-ki1">
+                                        <rect key="frame" x="0.0" y="89" width="374" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyJ-fw-zPN">
+                                                <rect key="frame" x="0.0" y="0.0" width="325" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HnT-dg-KMU">
+                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="soundSwitchTapped:" destination="AHD-UQ-Eib" eventType="valueChanged" id="Vsd-w5-Rn9"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -129,12 +146,28 @@
                     <navigationItem key="navigationItem" title="Settings" id="d1S-OO-DJB"/>
                     <connections>
                         <outlet property="diceNumSeg" destination="rnc-5b-KiG" id="lEu-rb-f2i"/>
+                        <outlet property="soundSwitch" destination="HnT-dg-KMU" id="zCs-sT-dhB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EB-7l-t15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0vb-RA-ZAr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1779.7101449275365" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uQ0-Bu-RL7">
+            <objects>
+                <viewController id="C8Q-79-Wg6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MBp-bk-39g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1yG-Ae-ciP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7k-1s-o5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="138"/>
         </scene>
     </scenes>
     <resources>

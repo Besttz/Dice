@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     
     var diceNum = 2
+    var sound = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let homeView = segue.destination as! SettingViewController
         homeView.diceNum = diceNum
+        homeView.sound = sound
     }
 }
 

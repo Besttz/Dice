@@ -11,17 +11,25 @@ import UIKit
 class SettingViewController: UIViewController {
 
     var diceNum = 2
+    var sound = true
+    
     @IBOutlet weak var diceNumSeg: UISegmentedControl!
+    @IBOutlet weak var soundSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         diceNumSeg.selectedSegmentIndex = diceNum - 1
+        soundSwitch.isOn = sound
     }
 
     @IBAction func changeNumDice(_ sender: UISegmentedControl) {
         diceNum = sender.selectedSegmentIndex + 1
     }
 
+    @IBAction func soundSwitchTapped(_ sender: UISwitch) {
+        sound = sender.isOn
+    }
+    
     // MARK: - Navigation
 
 
@@ -29,6 +37,7 @@ class SettingViewController: UIViewController {
 
         let homeView = segue.destination as! ViewController
         homeView.diceNum = diceNum
+        homeView.sound = sound
         
         if diceNum == 4 {
             homeView.dice.setTitle("🐔", for: .normal)
