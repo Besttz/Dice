@@ -23,7 +23,7 @@ class Dice {
         text = "\(index):"
         
         for i in 0...dices-1 {
-            value.append(Int.random(in: 1..<6))
+            value.append(Int.random(in: 1...6))
             total += value[i]
             text += " \(value[i])"
         }
